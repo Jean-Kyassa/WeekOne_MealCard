@@ -4,14 +4,273 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Meal Card - About</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        .header {
+            padding: 1rem 2rem;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 2rem;
+            font-weight: 500;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .button-group {
+            margin-top: 20px;
+        }
+
+        .button-group .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+
+        .button-group .btn-primary {
+            background-color: #f0c040;
+            color: #fff;
+        }
+
+        .button-group .btn-secondary {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        /* Services Section Styles */
+        .services-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .services-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            flex: 1;
+            min-width: 280px;
+            max-width: 320px;
+            text-align: center;
+        }
+
+        .service-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5em;
+            margin: 15px 0;
+        }
+
+        .service-card p {
+            color: #777;
+        }
+
+        /* How Our System Works Section Styles */
+        .system-works-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        .system-works-text {
+            max-width: 50%;
+        }
+
+        .system-works-text h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .system-works-text p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .system-works-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .system-works-button {
+            margin-top: 20px;
+        }
+
+        .system-works-button .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            background-color: #f0c040;
+            color: #fff;
+        }
+
+        .system-works-button .btn:hover {
+            background-color: #d8a030;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--background-light);
+            padding: 1.5rem 4rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quick-access {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .quick-access a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .contact-info p {
+            color: #666;
+            text-align: right;
+        }
+        .system-steps-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: white;
+}
+
+.system-steps-section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #ff6b6b;
+    text-transform: uppercase;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.step-item {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    max-width: 250px;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: #ff6b6b;
+}
+
+.step-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.step-item p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.6;
+}
+    </style>
 </head>
 <body>
     <!-- Same header as index.html -->
     <header class="header">
         <div class="nav-container">
             <div class="logo">
-                <img src="J:\Jean\InternshipWeek1\LG.png">
+                <img src="J:\Jean\InternshipWeek1\LG.png" alt="Smart Meal Card">
                 <!--span class="logo-text">SMART MEAL CARD</span-->
             </div>
             <nav class="nav-links">
@@ -37,15 +296,91 @@
                     <img src="J:\Jean\InternshipWeek1\homeIM.png" alt="About Illustration">
                 </div>
             </section>
+            <section class="services-section">
+                <h2>Our Services</h2>
+                <div class="services-container">
+                    <div class="service-card">
+                        <img src="J:\Jean\InternshipWeek1\1st.png" alt="First Service">
+                        <h3>OUR FIRST SERVICE</h3>
+                        <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="J:\Jean\InternshipWeek1\2nd.png" alt="Second Service">
+                        <h3>OUR SECOND SERVICE</h3>
+                        <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="J:\Jean\InternshipWeek1\3rd.png" alt="Third Service">
+                        <h3>OUR THIRD SERVICE</h3>
+                        <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="system-works-section">
+                <div class="system-works-text">
+                    <h2>How Our System Works?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel dolor at velit tempor commodo. Proin convallis vel nisi nec semper.</p>
+                    <div class="system-works-button">
+                        <a href="#" class="btn">View More</a>
+                    </div>
+                </div>
+                <div class="system-works-image">
+                    <img src="J:\Jean\InternshipWeek1\4th.png" alt="System Works Illustration">
+                </div>
+            </section>
+            <section class="system-steps-section">
+                <h2>HOW OUR SYSTEM WORK</h2>
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                            </svg>
+                        </div>
+                        <h3>Create Account</h3>
+                        <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet.</p>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z"/>
+                            </svg>
+                        </div>
+                        <h3>Get authontication</h3>
+                        <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet.</p>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z"/>
+                            </svg>
+                        </div>
+                        <h3>Get authontication</h3>
+                        <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet.</p>
+                    </div>
+                    
+                    <div class="step-item">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                            </svg>
+                        </div>
+                        <h3>enjoy app</h3>
+                        <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet.</p>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
     <footer class="footer">
         <div class="footer-content">
             <div class="quick-access">
-                <span>quick access:</span>
+                <span>Quick access:</span>
                 <a href="#">Help</a>
                 <a href="#">More</a>
-                <a href="#">about us</a>
+                <a href="#">About us</a>
             </div>
             <div class="footer-links">
                 <a href="#">Info</a>
@@ -60,7 +395,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- Same footer as index.html -->
 </body>
 </html>
